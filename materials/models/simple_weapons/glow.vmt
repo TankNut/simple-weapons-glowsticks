@@ -1,0 +1,8 @@
+VertexLitGeneric
+{
+	$basetexture	models/simple_weapons/glow
+	$envmap			env_cubemap
+
+	$surfaceprop	plastic
+	$selfillum		1
+}

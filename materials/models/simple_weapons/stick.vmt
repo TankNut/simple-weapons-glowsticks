@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	$basetexture	models/simple_weapons/stick
+	$surfaceprop	plastic
+	$halflambert 	1
+}
