@@ -1,3 +1,7 @@
+if SERVER then
+	resource.AddWorkshop("2843530927")
+end
+
 local colors = {
 	["Green"] = Color(0, 255, 63),
 	["Blue"] = Color(0, 161, 255),
