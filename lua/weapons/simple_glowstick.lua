@@ -2,6 +2,8 @@ AddCSLuaFile()
 
 simple_weapons.Include("Convars.Glowsticks")
 
+DEFINE_BASECLASS("simple_base_throwing")
+
 if CLIENT then
 	language.Add("simple_glowstick_ammo", "Glowsticks")
 end
@@ -46,6 +48,22 @@ function SWEP:GetGlowColor()
 	col = HSVToColor(hue, sat, 1)
 
 	return Color(col.r, col.g, col.b)
+end
+
+function SWEP:OnDeploy()
+	BaseClass.OnDeploy(self)
+
+	self:EmitSound("simple_weapons/glowstick_snap.wav")
+end
+
+function SWEP:FinishReload()
+	local ok = BaseClass.FinishReload(self)
+
+	if ok then
+		self:EmitSound("simple_weapons/glowstick_snap.wav")
+	end
+
+	return ok
 end
 
 if CLIENT then
