@@ -50,8 +50,8 @@ function SWEP:GetGlowColor()
 	return Color(col.r, col.g, col.b)
 end
 
-function SWEP:OnDeploy()
-	BaseClass.OnDeploy(self)
+function SWEP:Deploy()
+	BaseClass.Deploy(self)
 
 	self:EmitSound("simple_weapons/glowstick_snap.wav")
 end
