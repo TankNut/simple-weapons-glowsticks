@@ -54,6 +54,8 @@ function SWEP:Deploy()
 	BaseClass.Deploy(self)
 
 	self:EmitSound("simple_weapons/glowstick_snap.wav")
+
+	return true
 end
 
 function SWEP:FinishReload()
